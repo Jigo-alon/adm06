@@ -1,7 +1,74 @@
+/* selector de etiqueta */
 html {
 	font-family: sans-serif;
 	font-size: 200%;
 }
+
+html {
+	font-size: 100%;
+}
+
+img {
+	max-width: 600px;
+	height: auto;
+}
+
+/* selector de id */
+#titulo-principal {
+	color: greenyellow;
+	background-color: #000;
+}
+
+/* selector de clase */
+.redonda {
+	border-radius: 100%;
+	/* border-color: black; */
+	/* border-width: medium; */ /* thin | thick | medium | px | em | etc */
+	/* border-style: solid; */
+	border: black medium solid; /* short hand */
+}
+
+.sombra {
+	box-shadow: 15px 15px 10px rgba(255, 255, 0, .5);/* X Y blur color outset/inset */
+}
+
+.menu {
+	background-color: skyblue;
+	border: thin solid navy;
+}
+
+/* selector de hijo */
+.menu > ul {
+	background-color: red;
+}
+
+/* selector de hijo */
+.menu > ul > li {
+	background-color: #CCC;
+}
+
+/* selector descendiente (espacio en blanco) */
+.menu a {
+	background-color: black;
+	color: white;
+}
+
+/* pseudoclases */
+.frontend > li:hover,
+.frontend > li:first-child:hover {
+	background-color: pink;
+}
+
+.frontend > li:first-child {
+	background-color: green;
+}
+
+.frontend > li:last-child {
+	background-color: blue;
+}
+
+
+
 
 /* 
 Comentario en CSS
