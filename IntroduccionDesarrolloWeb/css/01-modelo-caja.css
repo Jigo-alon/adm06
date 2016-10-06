@@ -1,0 +1,61 @@
+/* reseteo universal básico del modelo de caja */
+html {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-size: 32px;
+}
+
+body { overflow-x: hidden; }
+
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+/* reseteo universal básico del modelo de caja */
+
+/* 
+El modelo de caja (margin, padding, border) modifica nuestro tamaño de caja (width, height)
+  357.5  x 74 - ancho original
+   64      64 - relleno
+    2       2 - borde
+  423.5 x 140 - ancho después del boxmodel
+*/
+div {
+	background-color: #666;
+	/* display: inline; */
+	width: 50%;
+	border: thin solid #F00;
+	/* padding: 1rem;
+	margin: 1rem; */
+	/* padding-left: 1rem;
+	margin-top: 1rem;  */
+	margin: 1rem auto;
+	padding: 0 1rem; /* t/b  l/r */
+	padding: 2rem 1rem 0;  /* t  l/r  b */
+	padding: 3rem 1rem .5rem 0; /* t r b l */
+}
+
+span {
+	background-color: #999;
+	/* display: block; */
+}
+
+.oculto {
+	display: none;
+}
+
+.container {
+	background-color: #333;
+	font-size: 0;
+}
+
+.item {
+ 	background-color: #999;
+ 	width: 25%;
+ 	display: inline-block;
+ 	padding: 1rem;
+ 	font-size: 1rem;
+}
