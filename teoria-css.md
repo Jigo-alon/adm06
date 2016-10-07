@@ -413,7 +413,7 @@ Nos ayudan a organizar nuestro código CSS, dividiendolo en módulos y component
 
     .menu { ... }
     .menu__item { ... }
-    .menu__item--hover{ ... }
+    .menu__item--active{ ... }
 
 ### [SUIT CSS - Utilidades y Componentes CSS](https://suitcss.github.io/)
 
@@ -428,8 +428,8 @@ Nos ayudan a organizar nuestro código CSS, dividiendolo en módulos y component
 ##### Ejemplo
 
         .Menu { ... }
-        .Menu.is-active { ... }
-        .Menu--hover { ... }
+        .Menu.is-visible { ... }
+        .Menu--active { ... }
         .Menu-item { ... }
         .Menu-link { ... }
 
