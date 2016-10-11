@@ -1,0 +1,49 @@
+html {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-family: 32px;
+}
+
+body { overflow-x: hidden; }
+
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0; 
+}
+
+.container {
+	background-color: #333;
+	border: thin solid #FF5700;
+	padding: 1rem;
+	margin: 1rem;
+	height: 800px;
+	/* display: inline-flex; caja de linea */
+	display: flex; /* caja de bloque */
+	flex-wrap: wrap; /* nowrap wrap wrap-reverse*/
+	flex-direction: row; /* row row-reverse column column-reverse */
+	justify-content: space-around; /* flex-start flex-end center space-between  space-around*/
+	align-items: flex-start; /* flex-start flex-end center stretch baseline La propiedad align-items trabaja cuando la propiedad flex-wrap es nowrap*/
+	align-content: space-around; /* flex-start flex-end center space-between  space-around La propiedad align-content trabaja trabaja cuando la propiedad flex-wrap es wrap o wrap-reverse */
+}
+
+.item {
+	width: 20%;
+	height: 75px;
+	padding: 1rem;
+	/* margin: 1rem; */
+	border: thin solid greenyellow;
+	font-size: 2rem;
+	background-color: #999;
+	flex: none;
+	flex: auto;
+}
+
+/* .item:nth-child(even) { par*/
+/* .item:nth-child(odd) { impar*/
+.item:nth-child(even) {
+	/* font-size: 4rem; */
+	order: 1;
+}
