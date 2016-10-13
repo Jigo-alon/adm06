@@ -1,0 +1,147 @@
+html {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-family: 16px;
+}
+
+body { overflow-x: hidden; }
+
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0; 
+}
+
+.container-fluid {
+	width: 100%;
+	border: thin solid #FF5700;
+	background-color: #333;
+}
+
+.container {
+	margin: auto;
+	max-width: 1200px;
+	border: thin solid #FF5700;
+	background-color: #333;
+}
+
+.item {
+	border: thin solid greenyellow;
+	background-color: #999;
+}
+
+.flex { display: flex; }
+
+.flex-inline { display: inline-flex; }
+
+.flex-wrap { flex-wrap: wrap; }
+
+.flex-nowrap { flex-wrap: nowrap; }
+
+.flex-wrap-reverse { flex-wrap: wrap-reverse; }
+
+.flex-direction-row { flex-direction: row; }
+
+.flex-direction-row-reverse { flex-direction: row-reverse; }
+
+.flex-direction-column { flex-direction: column; }
+
+.flex-direction-column-reverse { flex-direction: column-reverse; }
+
+.jc-flex-start { justify-content: flex-start; }
+
+.jc-flex-end { justify-content: flex-end; }
+
+.jc-center { justify-content: flex-center; }
+
+.jc-space-around { justify-content: flex-space-around; }
+
+.jc-space-between { justify-content: flex-space-between; }
+
+.ai-flex-start { align-items: flex-start; }
+
+.ai-flex-end { align-items: flex-end; }
+
+.ai-center { align-items: center; }
+
+.ai-stretch { align-items: stretch; }
+
+.ai-baseline { align-items: baseline; }
+
+.ac-flex-start { align-content: flex-start; }
+
+.ac-flex-end { align-content: flex-end; }
+
+.ac-center { align-content: flex-center; }
+
+.ac-space-around { align-content: flex-space-around; }
+
+.ac-space-between { align-content: flex-space-between; }
+
+.flex-auto { flex: auto; }
+
+.flex-none { flex: none; }
+
+.xs-12 { width: 100%; }
+
+.xs-11 { width: 91.66666666666667%; }
+
+.xs-10 { width: 83.33333333333333%; }
+
+.xs-9 { width: 75%; }
+
+.xs-8 { width: 66.66666666666667%; }
+
+.xs-7 { width: 58.33333333333333%; }
+
+.xs-6 { width: 50%; }
+
+.xs-5 { width: 41.66666666666667%; }
+
+.xs-4 { width: 33.33333333333333%; }
+
+.xs-3 { width: 25%; }
+
+.xs-2 { width: 16.66666666666667%; }
+
+.xs-1 { width: 8.33333333333333%; }
+
+/* 
+Maquetación Mobile First 
+CSS General 
+extrasmall devices <= 320px(20em) - xs
+
+Media Queries - min-width
+small devices <= 480px(30em) - sm
+medium devices <= 768px(48em) - md
+large devices <= 1024px(64em) - lg
+extralarge devices <= 1200px(75em) - xl
+*/
+
+@media screen and (min-width: 30em) {
+	.sm-12 { width: 100%; }
+
+	.sm-11 { width: 91.66666666666667%; }
+
+	.sm-10 { width: 83.33333333333333%; }
+
+	.sm-9 { width: 75%; }
+
+	.sm-8 { width: 66.66666666666667%; }
+
+	.sm-7 { width: 58.33333333333333%; }
+
+	.sm-6 { width: 50%; }
+
+	.sm-5 { width: 41.66666666666667%; }
+
+	.sm-4 { width: 33.33333333333333%; }
+
+	.sm-3 { width: 25%; }
+
+	.sm-2 { width: 16.66666666666667%; }
+
+	.sm-1 { width: 8.33333333333333%; }
+}
