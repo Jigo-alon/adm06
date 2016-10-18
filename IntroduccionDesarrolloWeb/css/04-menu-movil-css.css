@@ -1,0 +1,43 @@
+html {
+	box-sizing: border-box;
+	font-family: sans-serif;
+	font-family: 16px;
+}
+
+body { overflow-x: hidden; }
+
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0; 
+}
+
+.nav-mobile-label {
+	position: fixed;
+	top: 0;
+	right: 0;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.nav-mobile { display: none; }
+
+.nav-mobile:checked ~ .menu {
+	width: 20%;
+	height: auto;
+	opacity: 1;
+}
+
+.menu {
+	position: fixed;
+	top: 2rem;
+	right: 0;
+	overflow: hidden;
+	width: 0;
+	height: auto;
+	opacity: 0;
+	background-color: #CCC;
+	transition: opacity .5s ease-out;
+}
