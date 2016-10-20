@@ -39,5 +39,6 @@ body { overflow-x: hidden; }
 	height: auto;
 	opacity: 0;
 	background-color: #CCC;
+	/* transition: all .5s ease-out; */
 	transition: opacity .5s ease-out;
 }
