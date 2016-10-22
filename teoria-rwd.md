@@ -1,7 +1,9 @@
 # Responsive Web Design
+
 ![Responsive Web Design](http://bextlan.com/img/para-cursos/responsive-design.jpg)
 
 ## Índice
+
 1. [Traducciones al español](#traducciones-al-español)
 1. [Un poco de historia](#un-poco-de-historia)
 1. [Concepto](#concepto)
@@ -13,6 +15,7 @@
 
 
 ## Traducciones al español:
+
 * Diseño Web Sensible o
 * Diseño Web Adaptable o
 * Diseño Web Responsivo o
@@ -22,6 +25,7 @@
 
 
 ## Un poco de historia
+
  -----------------------------------------------------------------------------------------
 | En 2007...                                                                              |
 | --------------------------------------------------------------------------------------- |
@@ -42,7 +46,9 @@ El concepto de **One Web** hace referencia a la idea de construir una web para t
 
 
 ## Concepto 
+
 ### En 2010 - 2011
+
 Formalmente **Responsive Web Design** fue un término acuñado el 25 de mayo de 2010 por [Ethan Marcotte](https://twitter.com/beep) en su artículo [Responsive Web Design](http://alistapart.com/article/responsive-web-design) publicado en [A List Apart](http://alistapart.com/about) y posteriormente argumentado en el [libro de mismo nombre](https://abookapart.com/products/responsive-web-design) publicado en 2011.
 
 En dichas fechas (2010-2011) se presenta como una filosofía de diseño y desarrollo cuyo objetivo es adaptar la apariencia de los sitios y aplicaciones web al dispositivo que se esté utilizando para visualizarlos.
@@ -54,7 +60,9 @@ Se basa en 3 principios de CSS:
 3. Uso de Media Queries
 
 ### HOY
+
 Hoy día los sitios y aplicaciones web se visualizan en multitud de tipos de dispositivos como:
+
 * Tabletas
 * Teléfonos inteligentes
 * Lectores electrónicos, 
@@ -65,6 +73,7 @@ Hoy día los sitios y aplicaciones web se visualizan en multitud de tipos de dis
 * etc
 
 Además, cada tipo de dispositivo tiene sus características concretas:
+
 * Tamaño de pantalla
 * Resolución
 * Potencia de CPU
@@ -72,6 +81,7 @@ Además, cada tipo de dispositivo tiene sus características concretas:
 * etc
 
 Por tales motivos el Responsive Web Design hoy:
+
 * No se trata exclusivamente de reacomodar la información
 * Sino de entregar el contenido de manera óptima, considerando las características de hardware, software y tipos de conexiones, del dispositivo que el usuario este usando
 
@@ -84,6 +94,7 @@ ___
 
 
 ## Técnicas de Diseño Web MultiDispositivo
+
 * [Responsive Web Design](https://abookapart.com/products/responsive-web-design) (CSS)
 * [Adaptive Web Design](http://adaptivewebdesign.info/) (Diferentes versiones del sitio)
 * [Responsible Responsive Design](https://abookapart.com/products/responsible-responsive-design) (CSS + JS)
@@ -109,6 +120,7 @@ ___
 
 
 ## Media Queries
+
 Desde la especificación de CSS 2.1, las hojas de estilo han tenido cierto grado de capacidad para el reconocimiento de dispositivos mediante el uso de tipos de medios. Por ejemplo:
 
 ```html
@@ -139,6 +151,7 @@ La sintaxis es la siguiente:
 
 
 ## Breakpoints
+
 Ethan Marcotte en su libro Responsive Design (113-114 pags) nos propone la siguiente lista de puntos de interrupción según la resolución del dispositivo:
 
  ---------------------------------------
@@ -158,6 +171,7 @@ Ethan Marcotte en su libro Responsive Design (113-114 pags) nos propone la sigui
 
 Aunque los pixeles se consideran una unidad de medida absoluta, en realidad son unidades relativas a la resolución de pantalla del dispositivo que lo visualiza, si dicho dispositivo tiene una densidad mayor a la normal, entonces la proporción de los pixeles cambiará, por ello es importante que los breakpoints de las media queries se conviertan a ems que si son unidades relativas y proporcionales
 
+* [PX, EM or REM Media Queries?](https://zellwk.com/blog/media-query-units/)
 * [The EMs have it: Proportional Media Queries](http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/)
 * [Why Ems?](https://css-tricks.com/why-ems/)
 * [CSS px is an Angular Measurement](http://inamidst.com/stuff/notes/csspx)
@@ -179,6 +193,7 @@ Aunque los pixeles se consideran una unidad de medida absoluta, en realidad son 
 
 
 ## Más Recursos
+
 * [ResponsiveDesign.is](https://responsivedesign.is/)
 * [Responsive Resources](http://bradfrost.github.io/this-is-responsive/resources.html)
 * [Responsive Patterns](http://bradfrost.github.io/this-is-responsive/patterns.html)

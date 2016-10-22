@@ -19,10 +19,11 @@
 1. [Agente de Usuario](#agente-de-usuario)
 1. [Media Queries](#media-queries)
 1. [Formularios](#formularios)
-1. [JSON](#json)
 1. [AJAX](#ajax)
+1. [JSON](#json)
 1. [API's](#apis)
 1. [JavaScript Diferido y Asíncrono](#javascript-diferido-y-asíncrono)
+
 
 ## PROGRAMACIÓN
 
@@ -636,16 +637,16 @@ El mayor inconveniente de BOM es que, al contrario de lo que sucede con DOM, nin
 	* **`.screenX`** devuelve la posición de la ventana del navegador respecto de la pantalla en el eje horizontal
 	* **`.screenY`** devuelve la posición de la ventana del navegador respecto de la pantalla en el eje vertical
 * Métodos de la ventana:
-	* **`alert('string')`**: Muestra una ventana con un mensaje y un botón de aceptar que devuelve **`true`**
-	* **`confirm('string')`**: Muestra una ventana con un mensaje y 2 botones: aceptar que devuelve **`true`** y cancelar que devuelve **`false`**
-	* **`prompt('string')`**: Muestra una ventana con un mensaje solicitando información al usuario y 2 botones: aceptar que devuelve **`true`** y cancelar que devuelve **`false`**
-	* **`open('url')`**: Abre una ventana nueva o la url especificada
-	* **`close()`**: Cerrar la ventana actual, siempre y cuando haya sido abierta con el método **`open`**
-	* **`print()`**: Manda a imprimir la ventana actual
+	* **`alert('string')`** muestra una ventana con un mensaje y un botón de aceptar que devuelve **`true`**
+	* **`confirm('string')`** muestra una ventana con un mensaje y 2 botones: aceptar que devuelve **`true`** y cancelar que devuelve **`false`**
+	* **`prompt('string')`** muestra una ventana con un mensaje solicitando información al usuario y 2 botones: aceptar que devuelve **`true`** y cancelar que devuelve **`false`**
+	* **`open('url')`** abre una ventana nueva o la url especificada
+	* **`close()`** cierra la ventana actual, siempre y cuando haya sido abierta con el método **`open()`**
+	* **`print()`** imprime la ventana actual
 * Eventos de la ventana:
-	* **`load`**: Sucede al cargar la ventana del navegador
-	* **`resize`**: Sucede al redimensionar la ventana del navegador
-	* **`scroll`**: Sucede al mover las barras de desplazamiento de la ventana del navegador
+	* **`load`** sucede al cargar la ventana del navegador
+	* **`resize`** sucede al redimensionar la ventana del navegador
+	* **`scroll`** sucede al mover las barras de desplazamiento de la ventana del navegador
 
 **[⬆ regresar al índice](#Índice)**
 
@@ -715,7 +716,8 @@ Esto nos permite sentar las bases de WPO (**Web Performance Optimization**) en n
 
 **[⬆ regresar al índice](#Índice)**
 
-##Formularios
+
+## Formularios
 
 La programación de aplicaciones que contienen formularios web siempre ha sido una de las tareas fundamentales de JavaScript. De hecho, una de las principales razones por las que se inventó el lenguaje de programación fue la necesidad de validar los datos de los formularios directamente en el navegador del usuario. De esta forma, se evitaba recargar la página cuando el usuario cometía errores al rellenar los formularios.
 
@@ -728,7 +730,44 @@ No obstante, la aparición de AJAX y las API's de HTML5 han relevado al tratamie
 
 **[⬆ regresar al índice](#Índice)**
 
-##JSON
+
+## AJAX
+
+Es un acrónimo de **Asynchronous JavaScript + XML** o JavaScript asíncrono + XML.
+
+Ajax no es una tecnología en sí mismo. En realidad, se trata de varias tecnologías independientes que se unen.
+
+Las tecnologías que forman AJAX son:
+
+* **HTML y CSS**, para crear una presentación basada en estándares.
+* **DOM**, para la interacción y manipulación dinámica de la presentación.
+* **XML**, **XSLT** y **JSON**, para el intercambio y la manipulación de información.
+* **XMLHttpRequest**, para el intercambio asíncrono de información.
+* **JavaScript**, para unir todas las demás tecnologías.
+* [Más info de AJAX](http://librosweb.es/libro/ajax/capitulo_7.html)
+* [AJAX en MDN](https://developer.mozilla.org/es/docs/AJAX)
+* [AJAX sin jQuery](http://blog.garstasio.com/you-dont-need-jquery/ajax/)
+
+![Tecnologías AJAX](http://bextlan.com/img/para-cursos/tecnologias-ajax.gif)
+
+En las aplicaciones web tradicionales, las acciones del usuario en la página (pinchar en un botón, seleccionar un valor de una lista, etc.) desencadenan llamadas al servidor. Una vez procesada la petición del usuario, el servidor devuelve una nueva página HTML al navegador del usuario.
+
+Esta técnica tradicional para crear aplicaciones web funciona correctamente, pero no crea una buena sensación al usuario. Al realizar peticiones continuas al servidor, el usuario debe esperar a que se recargue la página con los cambios solicitados. Si la aplicación debe realizar peticiones continuas, su uso se convierte en algo molesto.
+
+AJAX permite mejorar completamente la interacción del usuario con la aplicación, evitando las recargas constantes de la página, ya que el intercambio de información con el servidor se produce en un segundo plano.
+
+![Modelo AJAX](http://bextlan.com/img/para-cursos/modelo-ajax.gif)
+
+Las aplicaciones construidas con AJAX eliminan la recarga constante de páginas mediante la creación de un elemento intermedio entre el usuario y el servidor. La nueva capa intermedia de AJAX mejora la respuesta de la aplicación, ya que el usuario nunca se encuentra con una ventana del navegador vacía esperando la respuesta del servidor.
+
+Las peticiones HTTP al servidor se sustituyen por peticiones JavaScript que se realizan al elemento encargado de AJAX. Las peticiones más simples no requieren intervención del servidor, por lo que la respuesta es inmediata. Si la interacción requiere una respuesta del servidor, la petición se realiza de forma asíncrona. En este caso, la interacción del usuario tampoco se ve interrumpida por recargas de página o largas esperas por la respuesta del servidor.
+
+![Proceso AJAX](http://bextlan.com/img/para-cursos/proceso-ajax.gif)
+
+**[⬆ regresar al índice](#Índice)**
+
+
+## JSON
 
 **JavaScript Object Notation** o Notación de Objetos de JavaScript, es un formato ligero de intercambio de datos. Leerlo y escribirlo es simple para humanos, mientras que para las máquinas es simple interpretarlo y generarlo. 
 
@@ -779,42 +818,8 @@ La sintaxis JSON se deriva de sintaxis de notación de objetos JavaScript:
 
 **[⬆ regresar al índice](#Índice)**
 
-##AJAX
 
-Es un acrónimo de **Asynchronous JavaScript + XML** o JavaScript asíncrono + XML.
-
-Ajax no es una tecnología en sí mismo. En realidad, se trata de varias tecnologías independientes que se unen.
-
-Las tecnologías que forman AJAX son:
-
-* **HTML y CSS**, para crear una presentación basada en estándares.
-* **DOM**, para la interacción y manipulación dinámica de la presentación.
-* **XML**, **XSLT** y **JSON**, para el intercambio y la manipulación de información.
-* **XMLHttpRequest**, para el intercambio asíncrono de información.
-* **JavaScript**, para unir todas las demás tecnologías.
-* [Más info de AJAX](http://librosweb.es/libro/ajax/capitulo_7.html)
-* [AJAX en MDN](https://developer.mozilla.org/es/docs/AJAX)
-
-![Tecnologías AJAX](http://bextlan.com/img/para-cursos/tecnologias-ajax.gif)
-
-En las aplicaciones web tradicionales, las acciones del usuario en la página (pinchar en un botón, seleccionar un valor de una lista, etc.) desencadenan llamadas al servidor. Una vez procesada la petición del usuario, el servidor devuelve una nueva página HTML al navegador del usuario.
-
-Esta técnica tradicional para crear aplicaciones web funciona correctamente, pero no crea una buena sensación al usuario. Al realizar peticiones continuas al servidor, el usuario debe esperar a que se recargue la página con los cambios solicitados. Si la aplicación debe realizar peticiones continuas, su uso se convierte en algo molesto.
-
-AJAX permite mejorar completamente la interacción del usuario con la aplicación, evitando las recargas constantes de la página, ya que el intercambio de información con el servidor se produce en un segundo plano.
-
-![Modelo AJAX](http://bextlan.com/img/para-cursos/modelo-ajax.gif)
-
-Las aplicaciones construidas con AJAX eliminan la recarga constante de páginas mediante la creación de un elemento intermedio entre el usuario y el servidor. La nueva capa intermedia de AJAX mejora la respuesta de la aplicación, ya que el usuario nunca se encuentra con una ventana del navegador vacía esperando la respuesta del servidor.
-
-Las peticiones HTTP al servidor se sustituyen por peticiones JavaScript que se realizan al elemento encargado de AJAX. Las peticiones más simples no requieren intervención del servidor, por lo que la respuesta es inmediata. Si la interacción requiere una respuesta del servidor, la petición se realiza de forma asíncrona. En este caso, la interacción del usuario tampoco se ve interrumpida por recargas de página o largas esperas por la respuesta del servidor.
-
-![Proceso AJAX](http://bextlan.com/img/para-cursos/proceso-ajax.gif)
-
-**[⬆ regresar al índice](#Índice)**
-
-
-##API's
+## API's
 
 Interfaz de Programación de Aplicaciones, abreviada como API (**Application Programming Interface**), es el conjunto de subrutinas, funciones y procedimientos que ofrece una libreria o framework para ser utilizado por otro software como una capa de abstracción.
 
