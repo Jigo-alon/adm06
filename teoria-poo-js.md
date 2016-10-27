@@ -13,6 +13,7 @@
 1. [Sintaxis JS](#sintaxis-javascript)
 1. [Servidor Web](#servidor-web)
 1. [Las buenas partes de JS](#las-buenas-partes-de-javascript)
+1. [JavaScript Diferido y Asíncrono](#javascript-diferido-y-asíncrono)
 1. [DOM](#dom)
 1. [Eventos](#eventos)
 1. [BOM](#bom)
@@ -22,7 +23,6 @@
 1. [AJAX](#ajax)
 1. [JSON](#json)
 1. [API's](#apis)
-1. [JavaScript Diferido y Asíncrono](#javascript-diferido-y-asíncrono)
 
 
 ## PROGRAMACIÓN
@@ -68,7 +68,7 @@ La programación es:
 
 La POO es un paradigma de programación que utiliza objetos e interacciones en el diseño de un sistema y está compuesta por varios elementos y características
 
-La POO trata de plasmar o representar la realidad del mundo físico (lo concreto) 
+La POO trata de plasmar o representar la realidad del mundo físico (lo concreto)
 y llevarlo al mundo digital (lo abstracto)
 
 ### Platón primer programador POO
@@ -101,7 +101,7 @@ kenai.edad = 3;
 kenai.esterilizado = true;
 ```
 
-#### Clase: 
+#### Clase:
 
 * Es un **Modelo** a seguir
 * La idea de Platón
@@ -118,7 +118,7 @@ Los objetos tienen 2 facultades:
 * Métodos
 * Atributos
 
-#### Métodos: 
+#### Métodos:
 
 * Son las cosas o **Acciones** que hacen los objetos
 	* Sintaxis: `objeto.metodo();`
@@ -130,7 +130,7 @@ Los objetos tienen 2 facultades:
 * Los **Parámetros** son argumentos (datos) que se pueden pasar (o no) a una función. Pueden ser opcionales, y se separan por comas.
 	* `function comer(comida) { ... }`
 
-#### Atributos: 
+#### Atributos:
 
 * Son las características o **Propiedades** que tienen los objetos
 	* Sintaxis: `objeto.atributo = valor;`
@@ -367,6 +367,53 @@ Es un patrón el cual produce un scope léxico usando las funciones de scoping d
 **[⬆ regresar al índice](#Índice)**
 
 
+## JavaScript Diferido y Asíncrono
+
+### JavaScript Clásico
+
+Cuando se carga JavaScript de forma natural, pueden existir problemas de rendimiento ya que el documento HTML se parsea hasta que se encuentra la etiqueta de script. En ese punto todo se detiene y el navegador se encarga de descargar el script y ejecutar lo que corresponda.
+
+```javascript
+<script src="js/mi_codigo.js"></script>
+```
+
+![Carga de JS Clásico](http://bextlan.com/img/para-cursos/script-js-clasico.png)
+
+Realizada dicha operación el parseo de HTML seguirá su curso. Esto en algunas situaciones hace que el usuario perciba lentitud al cargarse la página. El script actúa de forma bloqueante.
+
+A partir de HTML5 están disponibles dos nuevos atributos para cargar los scripts: **`async`** y **`defer`**. Ambos aportan flexibilidad al código que se construya.
+
+### JavaScript Diferido
+
+El atributo **`defer`** es **`boolean`**, cuando está presente, especifica que el script se ejecuta cuando la página ha terminado de cargarse. Sólo debe usarse para scripts externos.
+
+[¿Puedo usarlo?](http://caniuse.com/#search=defer)
+
+El navegador podrá seguir parseando y presentando partes de la página mientras se descarga el fichero de JavaScript. Esto dará una sensación de mayor velocidad al usuario. El script se ejecutará una vez finalizada la carga de la página.
+
+```javascript
+<script src="js/mi_codigo.js" defer></script>
+```
+
+![Carga de JS Diferido](http://bextlan.com/img/para-cursos/script-js-defer.png)
+
+### JavaScript Asíncrono
+
+El atributo **`async`** es **`boolean`**, cuando está presente, especifica que la secuencia de comandos se ejecutará de forma asíncrona tan pronto como esté disponible. Sólo debe usarse para scripts externos.
+
+[¿Puedo usarlo?](http://caniuse.com/#search=async)
+
+Como su nombre indica implica que la carga del script será totalmente asíncrona, esto permite que el navegador cargue y ejecute el script en paralelo, sin esperar que la página termine de cargar. Esto nos puede ayudar en algunas ocasiones pero hay que gestionarlo con cuidado ya que ni siquiera el DOM estará disponible.
+
+```javascript
+<script src="js/mi_codigo.js" async></script>
+```
+
+![Carga de JS Asíncrono](http://bextlan.com/img/para-cursos/script-js-async.png)
+
+**[⬆ regresar al índice](#Índice)**
+
+
 ## DOM
 
 El **Modelo de Objetos del Documento** (DOM - Document Object Model) es un API para documentos HTML y XML. Este prevee una representación estructural del documento, permitiéndole modificar su contenido y presentación visual mediante el uso de un lenguaje de scripting tal como JavaScript.
@@ -389,14 +436,14 @@ El **Modelo de Objetos del Documento** (DOM - Document Object Model) es un API p
 	* **`.childNodes`**: Nodos hijos
 	* **`.firstChild`**: Primer nodo hijo
 	* **`.lastChild`**: Último nodo hijo
-	* **`.nextSibling`**: Siguiente nodo hermano 
-	* **`.previousSibling`**: Anterior nodo hermano	
+	* **`.nextSibling`**: Siguiente nodo hermano
+	* **`.previousSibling`**: Anterior nodo hermano
 * Elementos (Etiquetas HTML):
 	* **`.parentElement`**: Elemento padre
 	* **`.children`**: Elementos hijos
 	* **`.firstElementChild`**: Primer elemento hijo
 	* **`.lastElementChild`**: Último elemento hijo
-	* **`.nextElementSibling`**: Siguiente elemento hermano 
+	* **`.nextElementSibling`**: Siguiente elemento hermano
 	* **`.previousElementSibling`**: Anterior elemento hermano
 
 ### Métodos para crear elementos en el DOM
@@ -586,7 +633,7 @@ Existen 3 formas de generar manejadores de eventos en JS:
 
 Hay un tercer parámetro de tipo **`boolean`**, si éste no se especifica, por defecto toma el valor de **`false`**
 
-```HTML	
+```HTML
 <button id="hola">Hola</button>
 ```
 
@@ -688,7 +735,7 @@ La sintaxis es la siguiente:
 
 ```css
 @media screen and (max-width:480px) and (orientation:portrait) {
-    /* 
+    /*
     Código CSS que se aplicará cuando se cumpla la media queries
     */
 }
@@ -769,7 +816,7 @@ Las peticiones HTTP al servidor se sustituyen por peticiones JavaScript que se r
 
 ## JSON
 
-**JavaScript Object Notation** o Notación de Objetos de JavaScript, es un formato ligero de intercambio de datos. Leerlo y escribirlo es simple para humanos, mientras que para las máquinas es simple interpretarlo y generarlo. 
+**JavaScript Object Notation** o Notación de Objetos de JavaScript, es un formato ligero de intercambio de datos. Leerlo y escribirlo es simple para humanos, mientras que para las máquinas es simple interpretarlo y generarlo.
 
 Está basado en un subconjunto del Lenguaje de Programación JavaScript, Standard ECMA-262 3rd Edition - Diciembre 1999. JSON es un formato de texto que es completamente independiente del lenguaje pero utiliza convenciones que son ampliamente conocidos por los programadores de la familia de lenguajes C, Java, JavaScript, Perl, Python, y muchos otros. Estas propiedades hacen que JSON sea un lenguaje ideal para el intercambio de datos.
 
@@ -823,9 +870,9 @@ La sintaxis JSON se deriva de sintaxis de notación de objetos JavaScript:
 
 Interfaz de Programación de Aplicaciones, abreviada como API (**Application Programming Interface**), es el conjunto de subrutinas, funciones y procedimientos que ofrece una libreria o framework para ser utilizado por otro software como una capa de abstracción.
 
-Una API representa la capacidad de comunicación entre componentes de software o hardware. Se trata del conjunto de llamadas a ciertas librerias que ofrecen acceso a ciertos servicios desde los procesos y representa un método para conseguir abstracción en la programación, generalmente (aunque no necesariamente) entre los niveles o capas inferiores y los superiores del software. 
+Una API representa la capacidad de comunicación entre componentes de software o hardware. Se trata del conjunto de llamadas a ciertas librerias que ofrecen acceso a ciertos servicios desde los procesos y representa un método para conseguir abstracción en la programación, generalmente (aunque no necesariamente) entre los niveles o capas inferiores y los superiores del software.
 
-Uno de los principales propósitos de una API consiste en proporcionar un conjunto de funciones de uso general. De esta forma, los programadores se benefician de las ventajas de la API haciendo uso de su funcionalidad, evitándose el trabajo de programar todo desde el principio. 
+Uno de los principales propósitos de una API consiste en proporcionar un conjunto de funciones de uso general. De esta forma, los programadores se benefician de las ventajas de la API haciendo uso de su funcionalidad, evitándose el trabajo de programar todo desde el principio.
 
 Las API son abstractas: el software que proporciona una API generalmente es llamado la implementación de esa API.
 
@@ -861,52 +908,5 @@ En JavaScript tenemos 2 tipos de API's:
 	* [OMDb API](http://omdbapi.com/)
 	* [API de Marvel](http://developer.marvel.com/)
 	* etc
-
-**[⬆ regresar al índice](#Índice)**
-
-
-## JavaScript Diferido y Asíncrono
-
-### JavaScript Clásico
-
-Cuando se carga JavaScript de forma natural, pueden existir problemas de rendimiento ya que el documento HTML se parsea hasta que se encuentra la etiqueta de script. En ese punto todo se detiene y el navegador se encarga de descargar el script y ejecutar lo que corresponda.
-
-```javascript
-<script src="js/mi_codigo.js"></script>
-```
-
-![Carga de JS Clásico](http://bextlan.com/img/para-cursos/script-js-clasico.png)
-
-Realizada dicha operación el parseo de HTML seguirá su curso. Esto en algunas situaciones hace que el usuario perciba lentitud al cargarse la página. El script actúa de forma bloqueante.
-
-A partir de HTML5 están disponibles dos nuevos atributos para cargar los scripts: **`async`** y **`defer`**. Ambos aportan flexibilidad al código que se construya.
-
-### JavaScript Diferido
-
-El atributo **`defer`** es **`boolean`**, cuando está presente, especifica que el script se ejecuta cuando la página ha terminado de cargarse. Sólo debe usarse para scripts externos.
-
-[¿Puedo usarlo?](http://caniuse.com/#search=defer)
-
-El navegador podrá seguir parseando y presentando partes de la página mientras se descarga el fichero de JavaScript. Esto dará una sensación de mayor velocidad al usuario. El script se ejecutará una vez finalizada la carga de la página.
-
-```javascript
-<script src="js/mi_codigo.js" defer></script>
-```
-
-![Carga de JS Diferido](http://bextlan.com/img/para-cursos/script-js-defer.png)
-
-### JavaScript Asíncrono
-
-El atributo **`async`** es **`boolean`**, cuando está presente, especifica que la secuencia de comandos se ejecutará de forma asíncrona tan pronto como esté disponible. Sólo debe usarse para scripts externos.
-
-[¿Puedo usarlo?](http://caniuse.com/#search=async)
-
-Como su nombre indica implica que la carga del script será totalmente asíncrona, esto permite que el navegador cargue y ejecute el script en paralelo, sin esperar que la página termine de cargar. Esto nos puede ayudar en algunas ocasiones pero hay que gestionarlo con cuidado ya que ni siquiera el DOM estará disponible.
-
-```javascript
-<script src="js/mi_codigo.js" async></script>
-```
-
-![Carga de JS Asíncrono](http://bextlan.com/img/para-cursos/script-js-async.png)
 
 **[⬆ regresar al índice](#Índice)**
