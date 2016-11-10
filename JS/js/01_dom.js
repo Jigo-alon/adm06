@@ -28,3 +28,24 @@
 	document.querySelectorAll('[name="email"]');
 	document.querySelectorAll('[href]');
 })();
+
+(function (d) {
+	'use strict';
+
+	var lista = d.querySelector('#lista');
+
+	console.log(
+		lista,
+		lista.parentNode,
+		lista.parentElement,
+		lista.childNodes,
+		lista.children,
+		lista.firstChild,
+		lista.firstElementChild,
+		lista.lastChild,
+		lista.lastElementChild,
+		lista.previousSibling,		lista.previousElementSibling,
+		lista.nextSibling,
+		lista.nextElementSibling
+	);
+})(document);
