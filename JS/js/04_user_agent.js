@@ -72,4 +72,4 @@
 		browserIcon,
 		whereIGo;
 
-})(document, window, navigator)
+})(document, window, navigator);
