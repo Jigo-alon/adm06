@@ -72,4 +72,52 @@
 		browserIcon,
 		whereIGo;
 
+		function redirectUA() {
+			if ( isBrowser.edge() ) {
+				whereIGo = 'http://www.reforma.com/';
+			} else if ( isMobile.android() ) {
+				whereIGo = 'http://www.reforma.com/EntradaAndroid.htm';
+			} else if ( isMobile.ios() ) {
+				whereIGo = 'http://www.reforma.com/EntradaIphone.htm';
+			} else {
+				whereIGo = 'http://www.reforma.com/';
+			}
+
+			w.location.href = whereIGo;
+		}
+
+		
+		w.onload = function () {
+			/*
+			console.log(
+				isMobile.android(),
+				isMobile.ios(),
+				isMobile.windows(),
+				isDesktop.windows(),
+				isMobile.any(),
+				isBrowser.edge(),
+				isBrowser.any()
+			);
+			*/
+
+			liUserAgent.textContent = ua;
+			
+			/*
+			if ( isMobile.any() ) {
+				liPlatform.textContent = isMobile.any();
+			} else {
+				liPlatform.textContent = isDesktop.any();
+			}
+			*/
+
+			liPlatform.textContent = ( isMobile.any() ) ? isMobile.any() : isDesktop.any();
+			liBrowser.textContent = isBrowser.any();
+
+
+			btnRedirect.addEventListener('click', redirectUA);
+
+			//redirectUA();
+		}
+
+		//w.onload = redirectUA;
 })(document, window, navigator);
