@@ -44,17 +44,21 @@ input[type="submit"]:hover, input[type="button"]:hover {
 	cursor: pointer;
 }
 
-[required]:valid {
-	border: thin solid green;
-	outline: thin solid green;
+[required]:valid, .valid {
+	border: thin solid green !important;
+	outline: thin solid green !important;
 }
 
-[required]:invalid {
-	border: thin solid red;
-	outline: thin solid red;
+[required]:invalid, .invalid {
+	border: thin solid red !important;
+	outline: thin solid red !important;
 
 }
 
 .message { font-size: 2rem; }
 
 .hidden { display: none; }
+
+.fade-in { transition: opacity .4s; }
+
+.fade-out { opacity: 0; }

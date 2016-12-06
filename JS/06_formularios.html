@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 	<title>Formularios</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./css/06_formularios.css">
 </head>
 <body>
@@ -15,18 +16,22 @@
 			<div>
 				<label for="nombre_id">Nombre</label>
 				<input type="text" id="nombre_id" name="nombre" class="validate" title="Tu nombre">
+				<span></span>
 			</div>
 			<div>
 				<label for="email_id">Email</label>
 				<input type="text" id="email_id" name="email" class="validate" title="Tu email">
+				<span></span>
 			</div>
 			<div>
 				<label for="asunto_id">Asunto</label>
 				<input type="text" id="asunto_id" name="asunto" class="validate" title="Asunto a tratar">
+				<span></span>
 			</div>
 			<div>
 				<label for="comentarios_id">Comentarios</label>
 				<textarea id="comentarios_id" name="comentarios" class="validate" title="Tus comentarios" cols="50" rows="5"></textarea>
+				<span></span>
 			</div>
 			<div>
 				<input type="submit" value="enviar">
@@ -64,5 +69,6 @@
 			<p>Muchas gracias por tus comentarios</p>
 		</div>
 	</form>
+	<script src="./js/06_formularios.js"></script>
 </body>
 </html>
