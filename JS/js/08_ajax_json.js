@@ -22,6 +22,7 @@
 
 					//template string - ES6 o ES2015
 					//interpolación de variable `Hola ${nombreVariable}`
+					/*
 					moviesTemplate += `
 						<article>
 							<h2>${moviesInfo.title}</h2>
@@ -30,6 +31,18 @@
 							<img src="${moviesInfo.poster}">
 						</article>
 					`;
+					*/
+
+					moviesInfo['movies'].forEach(function (movie) {
+						moviesTemplate += `
+							<article>
+								<h2>${movie.title}</h2>
+								<p><b>${movie.year}</b></p>
+								<p><i>${movie.genres}</i></p>
+								<img src="${movie.poster}">
+							</article>
+						`;	
+					});
 
 				} else {
 					
