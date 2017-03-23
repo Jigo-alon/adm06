@@ -25,3 +25,32 @@
 * [Teoría JS](./teoria-poo-js.md)
 * [Curso de Diseño y Programación Web de Bextlán](https://www.youtube.com/playlist?list=PLvq-jIkSeTUbxAO7uRoeNHH6ZCyjr7xq2)
 * [Tutoriales JavaScript de Bextlán](https://www.youtube.com/playlist?list=PLvq-jIkSeTUaw9krmA6bf5inYcuvUNWI3)
+
+## :school: Módulo Advanced Web Technologies
+
+### Opciones para contenido del módulo:
+
+#### 1. WordPress (PHP + MySQL)
+
+Puedes aprender por tu cuenta con los siguentes recursos:
+
+* [Curso P.O.O. con PHP y MySQL Bextlán](https://www.youtube.com/playlist?list=PLvq-jIkSeTUZEHvKw7Gx3g5CjlcvA3jr1) **ES GRATIS** todos los martes video nuevo
+* [Curso WordPress de Bextlán](https://www.youtube.com/playlist?list=PLvq-jIkSeTUZDOcKsQz79wnYlTvmAdLkj) **ES GRATIS** el curso esta terminado tiene 36 clases
+* [Curso WordPress desde cero de Escuela Digital](https://escuela.digital/cursos/wordpress) **Cuesta $35usd** 12 sesiones de contenido con videos y recursos descargables
+
+#### 2. Tecnologías JavaScript
+
+Puedes aprender por tu cuenta con los siguentes recursos:
+
+* [Curso de Node.js](https://www.youtube.com/playlist?list=PLvq-jIkSeTUY3gY-ptuqkNEXZHsNwlkND) **ES GRATIS** todos los jueves video nuevo
+* [Curso WordPress desde cero de Escuela Digital](https://escuela.digital/cursos/nodejs) **Cuesta $35usd** 12 sesiones de contenido con videos y recursos descargables
+
+### Temario para la clase:
+
+* 11 sesiones de 2:30hrs
+* Git + GitHub
+* Node + NPM
+* Metalenguajes
+* Node + Express
+* Firebase
+* Configuración de VPS
