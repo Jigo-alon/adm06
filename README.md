@@ -48,9 +48,10 @@ Puedes aprender por tu cuenta con los siguentes recursos:
 ### Temario para la clase:
 
 * 11 sesiones de 2:30hrs
+* [Slides de Introducción](https://escuelait.github.io/taller-frontend-2017/#/)
 * Git + GitHub
 * Node + NPM
-* Metalenguajes
+* Optimización de Frontend
 * Node + Express
 * Firebase
 * Configuración de VPS
