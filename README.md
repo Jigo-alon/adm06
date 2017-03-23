@@ -57,3 +57,4 @@ Puedes aprender por tu cuenta con los siguentes recursos:
 
 ### Recursos de clase:
 * [Slides Herramientas de Frontend](https://escuelait.github.io/taller-frontend-2017/#/)
+* [Videotutorial sobre Visual Studio Code](https://www.youtube.com/watch?v=lHs99G0m754)
