@@ -45,13 +45,15 @@ Puedes aprender por tu cuenta con los siguentes recursos:
 * [Curso de Node.js](https://www.youtube.com/playlist?list=PLvq-jIkSeTUY3gY-ptuqkNEXZHsNwlkND) **ES GRATIS** todos los jueves video nuevo
 * [Curso WordPress desde cero de Escuela Digital](https://escuela.digital/cursos/nodejs) **Cuesta $35usd** 12 sesiones de contenido con videos y recursos descargables
 
-### Temario para la clase:
+### Temario:
 
 * 11 sesiones de 2:30hrs
-* [Slides de Introducción](https://escuelait.github.io/taller-frontend-2017/#/)
+* Herramientas y Optimización de Front end
 * Git + GitHub
 * Node + NPM
-* Optimización de Frontend
 * Node + Express
 * Firebase
 * Configuración de VPS
+
+### Recursos de clase:
+* [Slides Herramientas de Frontend](https://escuelait.github.io/taller-frontend-2017/#/)
