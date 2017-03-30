@@ -1,0 +1,17 @@
+{
+  "name": "maratones",
+  "version": "1.0.0",
+  "description": "Aprendiendo a desarrollar un Boilerplate para proyectos JavaScript",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan MirCha <jonmircha@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.5.2"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
