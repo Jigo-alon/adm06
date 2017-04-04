@@ -1,0 +1,9 @@
+html {
+  box-sizing: border-box;
+  background-color: #000;
+  color: #FFF; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }

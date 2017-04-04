@@ -4,12 +4,20 @@
   "description": "Aprendiendo a desarrollar un Boilerplate para proyectos JavaScript",
   "main": "dist/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w -o ./public/css/ ./src/scss",
+    "pug": "pug -w -P ./src/pug/ -o ./public/",
+    "serve": "browser-sync start --server --serveStatic public --files public --reload-delay=300 --reload-debounce=500",
+    "watch:dev": "parallelshell \"npm run sass\" \"npm run pug\" \"npm run serve\""
   },
   "author": "Jonathan MirCha <jonmircha@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^4.5.2"
+    "browser-sync": "^2.18.8",
+    "node-sass": "^4.5.2",
+    "parallelshell": "^2.0.0",
+    "pug": "^2.0.0-beta11",
+    "pug-cli": "^1.0.0-alpha6"
   },
   "dependencies": {
     "jquery": "^3.2.1"
