@@ -9,7 +9,8 @@
     "pug": "pug -w -P ./src/pug/ -o ./public/",
     "babel": "babel -w ./src/js/ -d ./public/js",
     "serve": "browser-sync start --server --serveStatic public --files public --reload-delay=300 --reload-debounce=500",
-    "watch:dev": "parallelshell \"npm run sass\" \"npm run pug\" \"npm run babel\" \"npm run serve\""
+    "watch:dev": "parallelshell \"npm run sass\" \"npm run pug\" \"npm run babel\" \"npm run serve\"",
+    "img:pack": "imagemin imagemin-cli imagemin-pngquant imagemin-jpeg-recompress imagemin-webp imagemin-svgo imagemin-gifsicle"
   },
   "author": "Jonathan MirCha <jonmircha@gmail.com>",
   "license": "MIT",
