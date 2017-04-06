@@ -2,7 +2,7 @@
   "name": "maratones",
   "version": "1.0.0",
   "description": "Aprendiendo a desarrollar un Boilerplate para proyectos JavaScript",
-  "main": "dist/index.html",
+  "main": "public/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass -w -o ./public/css/ ./src/scss",
@@ -10,7 +10,11 @@
     "babel": "babel -w ./src/js/ -d ./public/js",
     "serve": "browser-sync start --server --serveStatic public --files public --reload-delay=300 --reload-debounce=500",
     "watch:dev": "parallelshell \"npm run sass\" \"npm run pug\" \"npm run babel\" \"npm run serve\"",
-    "img:pack": "imagemin imagemin-cli imagemin-pngquant imagemin-jpeg-recompress imagemin-webp imagemin-svgo imagemin-gifsicle"
+    "imagemin": "imagemin \"./src/img/*.+(jpg|png)\" -o ./public/img/ -p=pngquant -p=jpeg-recompress",
+    "webp": "imagemin \"./public/img/*.jpg\" -o ./public/img/ -p=webp",
+    "svgmin": "imagemin \"./src/img/*.svg\" -o ./public/img/ -p=svgo",
+    "gifmin": "imagemin \"./src/img/*.gif\" -o ./public/img/ -p=gifsicle",
+    "build:media": "npm run imagemin && npm run webp && npm run svgmin && npm run gifmin"
   },
   "author": "Jonathan MirCha <jonmircha@gmail.com>",
   "license": "MIT",
