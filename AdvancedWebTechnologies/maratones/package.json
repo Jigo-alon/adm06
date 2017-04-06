@@ -7,12 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass -w -o ./public/css/ ./src/scss",
     "pug": "pug -w -P ./src/pug/ -o ./public/",
+    "babel": "babel -w ./src/js/ -d ./public/js",
     "serve": "browser-sync start --server --serveStatic public --files public --reload-delay=300 --reload-debounce=500",
-    "watch:dev": "parallelshell \"npm run sass\" \"npm run pug\" \"npm run serve\""
+    "watch:dev": "parallelshell \"npm run sass\" \"npm run pug\" \"npm run babel\" \"npm run serve\""
   },
   "author": "Jonathan MirCha <jonmircha@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-env": "^1.3.2",
     "browser-sync": "^2.18.8",
     "node-sass": "^4.5.2",
     "parallelshell": "^2.0.0",
