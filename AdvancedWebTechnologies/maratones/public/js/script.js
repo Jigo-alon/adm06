@@ -1,8 +1,13 @@
 'use strict';
 
-var tecnologia = 'Babel',
-    hola = 'Hola Mundo con ' + tecnologia;
+(function (d, w) {
+  var tecnologia = 'Babel',
+      hola = 'Hola Mundo con ' + tecnologia;
 
-document.addEventListener('DOMContentLoaded', function () {
-  return alert(hola);
-});
+  d.addEventListener('DOMContentLoaded', function () {
+    var saludo = document.createElement('h2');
+    saludo.textContent = hola;
+    d.body.appendChild(saludo);
+    //alert(hola)
+  });
+})(document, window);

@@ -1,9 +1,14 @@
 html {
   box-sizing: border-box;
-  background-color: #000;
+  background-color: navy;
   color: #FFF; }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit; }
+
+a {
+  color: #FFF; }
+  a:hover {
+    color: #000; }

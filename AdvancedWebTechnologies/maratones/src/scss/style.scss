@@ -1,10 +1,11 @@
 //variables en sass
 $black: #000;
+$navy: navy;
 $white: #FFF;
 
 html {
   box-sizing: border-box;
-  background-color: $black;
+  background-color: $navy;
   color: $white;
 }
 
@@ -12,4 +13,12 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+a {
+  color: $white;
+
+  &:hover {
+    color: $black;
+  }
 }

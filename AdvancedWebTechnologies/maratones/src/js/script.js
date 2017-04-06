@@ -1,7 +1,12 @@
+((d, w) => {
+  let tecnologia = 'Babel',
+    hola = `Hola Mundo con ${tecnologia}`;
 
 
-let tecnologia = 'Babel',
-  hola = `Hola Mundo con ${tecnologia}`;
-
-
-document.addEventListener('DOMContentLoaded', () => alert(hola) )
+  d.addEventListener('DOMContentLoaded', () => {
+    let saludo = document.createElement('h2')
+    saludo.textContent = hola
+    d.body.appendChild(saludo)
+    //alert(hola)
+  })
+})(document, window);

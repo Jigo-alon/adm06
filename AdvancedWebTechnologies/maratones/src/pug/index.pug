@@ -9,6 +9,12 @@ head
 body
   h1 Titulo
   h2 Hola
+  p para la siguiente sesion estudia la sintaxis de:
+  -var estudiar = [['pug', 'https://pugjs.org/api/getting-started.html'], ['sass', 'http://sass-lang.com/guide'], ['es6', 'https://github.com/jonmircha/adm06/blob/master/teoria-es6.md']]
+  ul
+    each elemento in estudiar
+      li
+        a(href=`${elemento[1]}` target="_blank")= elemento[0]
   -var estaciones = ['Primavera', 'Verano', 'Otoño', 'Invierno']
   ul
     each estacion in estaciones
@@ -18,4 +24,5 @@ body
     | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maxime, accusantium explicabo! Porro laudantium atque beatae rem, similique mollitia perspiciatis nostrum molestias. Totam quaerat animi laudantium enim consequuntur, quae assumenda?
   script.
     //alert('Hola Mundo con Pug y Sass')
+  script(src="./js/script.js")
   
