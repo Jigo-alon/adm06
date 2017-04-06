@@ -14,7 +14,7 @@
     "webp": "imagemin \"./public/img/*.jpg\" -o ./public/img/ -p=webp",
     "svgmin": "imagemin \"./src/img/*.svg\" -o ./public/img/ -p=svgo",
     "gifmin": "imagemin \"./src/img/*.gif\" -o ./public/img/ -p=gifsicle",
-    "build:media": "npm run imagemin && npm run webp && npm run svgmin && npm run gifmin"
+    "build:images": "npm run imagemin && npm run webp && npm run svgmin && npm run gifmin"
   },
   "author": "Jonathan MirCha <jonmircha@gmail.com>",
   "license": "MIT",
