@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass -w -o ./public/css/ ./src/scss",
-    "pug": "pug -w -P ./src/pug/ -o ./public/",
+    "pug": "pug -w -P -p ./src/pug/partials ./src/pug/templates/ -o ./public/",
     "babel": "babel -w ./src/js/ -d ./public/js",
     "serve": "browser-sync start --server --serveStatic public --files public --reload-delay=300 --reload-debounce=500",
     "watch:dev": "parallelshell \"npm run sass\" \"npm run pug\" \"npm run babel\" \"npm run serve\"",

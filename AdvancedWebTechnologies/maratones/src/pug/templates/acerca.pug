@@ -1,0 +1,11 @@
+extends ../partials/layout.pug
+
+block metatags
+  -var title = '¿Qué es una Maratón?'
+  -var description = 'En esta sección te explicamos qué es una Maratón'
+  title= title
+  meta(name="description", content=description)
+
+block content
+  h1= title
+  p= description

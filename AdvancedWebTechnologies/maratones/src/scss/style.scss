@@ -1,24 +1,24 @@
-//variables en sass
-$black: #000;
-$navy: navy;
-$white: #FFF;
+@import 'https://cdnjs.cloudflare.com/ajax/libs/hamburgers/0.8.1/hamburgers.min.css';
 
-html {
-  box-sizing: border-box;
-  background-color: $navy;
-  color: $white;
-}
+@import 'components/box-sizing';
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+$header-bg: rgba(23, 18, 38, .9);
+$header-color: #FFF;
+$header-height: 4rem;
+$header-container-width: 1200px;
 
-a {
-  color: $white;
-
-  &:hover {
-    color: $black;
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 997;
+  width: 100%;
+  height: $header-height;
+  background-color: $header-bg;
+  color: $header-color;
+  
+  &-container {
+    margin: auto;
+    max-width: $header-container-width;
   }
 }

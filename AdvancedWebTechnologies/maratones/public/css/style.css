@@ -1,14 +1,28 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/hamburgers/0.8.1/hamburgers.min.css';
 html {
   box-sizing: border-box;
-  background-color: navy;
-  color: #FFF; }
+  font-family: sans-serif;
+  font-size: 16px; }
 
 *,
-*:before,
-*:after {
-  box-sizing: inherit; }
+*:after,
+*:before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
 
-a {
+body {
+  overflow-x: hidden; }
+
+.Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 997;
+  width: 100%;
+  height: 4rem;
+  background-color: rgba(23, 18, 38, 0.9);
   color: #FFF; }
-  a:hover {
-    color: #000; }
+  .Header-container {
+    margin: auto;
+    max-width: 1200px; }
