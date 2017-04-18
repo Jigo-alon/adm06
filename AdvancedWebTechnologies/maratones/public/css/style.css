@@ -14,6 +14,15 @@ html {
 body {
   overflow-x: hidden; }
 
+.hamburger:focus {
+  outline: 0;
+  border: 0; }
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  background-color: #0096D9; }
+
 .Header {
   position: fixed;
   top: 0;
@@ -26,3 +35,76 @@ body {
   .Header-container {
     margin: auto;
     max-width: 1200px; }
+
+.Logo {
+  position: fixed;
+  top: 0;
+  left: calc(50% - 2rem);
+  z-index: 998; }
+  .Logo-link {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    text-indent: -9999px;
+    background-image: url("../img/marathons-logo.svg");
+    background-size: 3.5rem;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+.Panel {
+  position: fixed;
+  left: 0;
+  top: 4rem;
+  z-index: 996;
+  background-color: rgba(23, 18, 38, 0.9);
+  max-width: 0;
+  max-height: 100%;
+  overflow: hidden;
+  transform: translateX(-100vw);
+  transition: all .3s ease-out; }
+  .Panel.is-active {
+    max-width: 100vw;
+    overflow-y: auto;
+    transform: translateX(0); }
+  .Panel-button {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; }
+
+.Menu {
+  width: 100vw; }
+  .Menu-listItem {
+    border-top: thin solid #0096D9;
+    list-style-type: none;
+    text-align: center; }
+  .Menu-item {
+    border-bottom: thin solid #0096D9; }
+  .Menu-link {
+    display: block;
+    padding: 1rem;
+    font-weight: bold;
+    color: #0096D9;
+    transition: all .3s ease-out; }
+  .Menu-link:hover {
+    background-color: #0096D9;
+    color: #FFF; }
+
+.u-after-fixed {
+  padding-top: 4rem; }
+
+@media screen and (min-width: 64em) {
+  .Header-container {
+    display: flex; }
+  .Logo {
+    position: static;
+    width: 10%; }
+  .Panel {
+    position: static;
+    width: 90%;
+    max-width: none;
+    overflow: visible;
+    transition: none;
+    transform: translateX(0); }
+    .Panel-button {
+      display: none; } }
