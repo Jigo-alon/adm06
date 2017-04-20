@@ -1,0 +1,15 @@
+-var menu = [ ['index','Inicio'], ['acerca','Acerca'], ['maratones','Maratones'], ['galeria','Galería'], ['contacto','Contacto'] ]
+  header.Header
+    section.Header-container
+      h1.Logo
+        a.Logo-link(href="./")= title
+      div.Panel-button
+        button.hamburger.hamburger--vortex(type='button')
+          span.hamburger-box
+            span.hamburger-inner
+      article.Panel
+        nav.Menu
+          ul.Menu-listItem
+            each item in menu
+              li.Menu-item
+                a.Menu-link(href=`./${item[0]}.html`)= item[1]

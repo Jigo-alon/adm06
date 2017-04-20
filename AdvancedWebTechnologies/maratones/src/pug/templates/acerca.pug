@@ -7,5 +7,7 @@ block metatags
   meta(name="description", content=description)
 
 block content
-  h1= title
-  p= description
+  include ../partials/components/navigation.pug
+  div.u-after-fixed
+    h1= title
+    p= description
