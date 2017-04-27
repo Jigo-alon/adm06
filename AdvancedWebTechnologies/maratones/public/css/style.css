@@ -765,3 +765,75 @@ body {
       display: inline; }
     .Menu-link:hover {
       background-color: transparent; } }
+
+.Tabs {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .Tabs input[type="radio"] {
+    display: none; }
+  .Tabs label {
+    width: 24.75%;
+    height: 3rem;
+    padding: 1rem .25rem;
+    text-align: center;
+    font-size: .75rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: .5rem .5rem 0 0;
+    background-color: #171226;
+    color: #0096D9;
+    transition: background-color .3s; }
+    @media screen and (min-width: 64em) {
+      .Tabs label {
+        padding: 1rem 1.25rem;
+        font-size: 1rem; } }
+  .Tabs label:hover {
+    background-color: rgba(23, 18, 38, 0.75);
+    color: #FFF; }
+  .Tabs-content {
+    display: none;
+    padding: 1rem;
+    width: 100%;
+    min-height: 50vh;
+    color: #000;
+    background-color: #E9E9E9; }
+
+#toggle-tab-0:checked ~ label[for="toggle-tab-0"] {
+  padding-bottom: -.25rem;
+  cursor: default;
+  color: #000;
+  background-color: #E9E9E9; }
+
+#toggle-tab-0:checked ~ #tab-0 {
+  display: block; }
+
+#toggle-tab-1:checked ~ label[for="toggle-tab-1"] {
+  padding-bottom: -.25rem;
+  cursor: default;
+  color: #000;
+  background-color: #E9E9E9; }
+
+#toggle-tab-1:checked ~ #tab-1 {
+  display: block; }
+
+#toggle-tab-2:checked ~ label[for="toggle-tab-2"] {
+  padding-bottom: -.25rem;
+  cursor: default;
+  color: #000;
+  background-color: #E9E9E9; }
+
+#toggle-tab-2:checked ~ #tab-2 {
+  display: block; }
+
+#toggle-tab-3:checked ~ label[for="toggle-tab-3"] {
+  padding-bottom: -.25rem;
+  cursor: default;
+  color: #000;
+  background-color: #E9E9E9; }
+
+#toggle-tab-3:checked ~ #tab-3 {
+  display: block; }
