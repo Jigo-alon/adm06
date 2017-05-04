@@ -1,5 +1,7 @@
 -var tabs = [ ['Pestaña1', 'Contenido1', true], ['Pestaña2', 'Contenido2', false], ['Pestaña3', 'Contenido3', false], ['Pestaña4', 'Contenido4', false] ]
 article#tabs.Tabs
+  //-Comentario en Pug
+  //Comentario que compilara al HTML
   each tab, index in tabs
     if ( tab[2] )
       input(type="radio", name="tabs", id=`toggle-tab-${index}`, checked)

@@ -14,7 +14,10 @@
     "webp": "imagemin \"./public/img/*.jpg\" -o ./public/img/ -p=webp",
     "svgmin": "imagemin \"./src/img/*.svg\" -o ./public/img/ -p=svgo",
     "gifmin": "imagemin \"./src/img/*.gif\" -o ./public/img/ -p=gifsicle",
-    "build:images": "npm run imagemin && npm run webp && npm run svgmin && npm run gifmin"
+    "build:images": "npm run imagemin && npm run webp && npm run svgmin && npm run gifmin",
+    "min:css-js": "node buildify.js",
+    "min:html": "pug -p ./src/pug/partials ./src/pug/templates/ -o ./public/",
+    "min": "npm run min:css-js && npm run min:html"
   },
   "author": "Jonathan MirCha <jonmircha@gmail.com>",
   "license": "MIT",
@@ -22,6 +25,7 @@
     "babel-cli": "^6.24.0",
     "babel-preset-env": "^1.3.2",
     "browser-sync": "^2.18.8",
+    "buildify": "^0.4.0",
     "imagemin": "^5.2.2",
     "imagemin-cli": "^3.0.0",
     "imagemin-gifsicle": "^5.1.0",
